@@ -1,0 +1,417 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: emCal(16, 30);
+  border: 1px solid setShadeColor(border);
+  position: relative;
+  z-index: 6;
+  transition: $transition;
+  height: 100%;
+  &.-borderless {
+    border-width: 0;
+    @include mq(md) {
+      border-width: 1px;
+    }
+  }
+  &.-pink {
+    .product-type {
+      color: setColor(pink);
+    }
+  }
+  &.-coffee {
+    .product-type {
+      color: setColor(coffee);
+    }
+  }
+  &:hover {
+    border: 0 transparent;
+    z-index: 20;
+    .product-select {
+      button {
+        transform: scale(1) translateY(-20px);
+      }
+    }
+    .product-name {
+      transform: traslateY(20px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .product-price {
+      transform: translateY(-20px);
+    }
+    .product-img {
+      img {
+        transform: scale(1.05);
+        transform-origin: 50% 50%;
+      }
+    }
+    &:after {
+      height: 45px;
+      opacity: 1;
+      bottom: -40px;
+    }
+    &:before {
+      visibility: visible;
+      opacity: 1;
+    }
+    @include mq(sm) {
+      .product-name {
+        transform: traslateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .product-price {
+        transform: translateY(0);
+      }
+    }
+  }
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 0;
+    opacity: 0;
+    border: 1px solid transparent;
+    transition: $transition;
+    @include mq(sm) {
+      display: none;
+    }
+  }
+  &:before {
+    height: calc(100% + 40px);
+    bottom: -40px;
+    border: 0;
+    visibility: hidden;
+    box-shadow: 0px 20px 32px 0 rgba(53, 78, 84, 0.15);
+  }
+  &-img {
+    a {
+      height: 138px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+      img {
+        @include imgCenter($type: contain);
+        transition: $transition;
+      }
+    }
+  }
+  &-type {
+    // @include font-bold(12px, setColor(green), 1);
+    @include typo($fsz: emCal(16, 12), $color: setColor(green), $fw: 700);
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    margin-bottom: 10px;
+  }
+  &-name {
+    @include typo($fsz: emCal(16, 18), $lh: emCal(18, 24), $fw: 500);
+    @include overflowText(1);
+    margin-bottom: emCal(18, 5);
+    transition: 0.4s;
+    visibility: visible;
+  }
+  &-price {
+    @include typo($fsz: emCal(16, 20), $fw: 500);
+    transition: 0.4s ease;
+    del {
+      @include typo($color: setShadeColor(regular));
+      display: inline-block;
+      margin-left: emCal(20, 5);
+    }
+  }
+  &-select {
+    position: absolute;
+    transition: 0.3s ease;
+    top: 100%;
+    z-index: 5;
+    bottom: 0;
+    .product-btn {
+      height: emCal(16, 40);
+      width: emCal(16, 40);
+      padding: 0;
+      transform: scale(0) translateY(0px);
+      transition: $transition;
+      background-color: setColor(light);
+      color: setShadeColor(dark);
+      border: 0;
+      &.active {
+        background-color: setColor(green);
+        color: #fff;
+      }
+      &:hover {
+        background-color: setColor(green);
+        color: #fff;
+      }
+      &:not(:last-child) {
+        margin-right: emCal(16, 5);
+      }
+      i {
+        font-size: emCal(16, 14);
+      }
+    }
+    @include mq(sm) {
+      display: none;
+    }
+  }
+  &-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.product-tiny {
+  display: flex;
+  align-items: center;
+  &:hover {
+    .product-tiny-img {
+      border-color: setColor(green);
+    }
+  }
+  &.-bordered {
+    border: 1px solid setShadeColor(light);
+    .product-tiny-img {
+      border: 0;
+    }
+  }
+  &-img {
+    border: 1px solid setShadeColor(light);
+    margin-right: emCal(16, 25);
+    transition: border $transition;
+    a {
+      height: emCal(16, 100);
+      width: emCal(16, 100);
+      display: block;
+      padding: emCal(16, 15);
+      img {
+        @include imgCenter($type: contain);
+      }
+    }
+  }
+  &-content {
+    .product-tiny-name {
+      @include link($fsz: emCal(16, 18), $fw: 600);
+      @include overflowText(1);
+      margin-bottom: emCal(16, 10);
+    }
+    .product-tiny-price {
+      @include typo($fsz: emCal(16, 18), $fw: 500);
+      transition: 0.4s ease;
+      del {
+        @include typo($color: setShadeColor(regular));
+        display: inline-block;
+        margin-left: emCal(18, 5);
+      }
+    }
+  }
+}
+
+.product-dale {
+  padding: emCal(16, 30);
+  border: 2px solid setColor(green);
+  height: 100%;
+  &:hover {
+    .product-img {
+      img {
+        transform: scale(1.05);
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+  &-img {
+    @extend .product-img;
+  }
+  &-type {
+    @extend .product-type;
+  }
+  &-name {
+    @include typo($fsz: emCal(16, 18), $lh: emCal(18, 24), $fw: 500);
+    @include overflowText(1);
+    margin-bottom: emCal(18, 5);
+  }
+  &-price {
+    margin-bottom: emCal(16, 30);
+    @include typo($fsz: emCal(16, 20), $fw: 500);
+    del {
+      @include typo($color: setShadeColor(regular));
+      display: inline-block;
+      margin-left: emCal(20, 5);
+    }
+  }
+  &-countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: emCal(16, 40);
+    &-item {
+      &:not(:last-child) {
+        margin-right: emCal(16, 5);
+      }
+      background-color: setColor(light);
+      border-radius: emCal(16, 10);
+      text-align: center;
+      padding: emCal(16, 5) emCal(16, 10);
+      h6 {
+        @include typo($fsz: emCal(16, 24), $fw: 600);
+      }
+      span {
+        @include typo(
+          $fsz: emCal(16, 12),
+          $up: true,
+          $fw: 600,
+          $color: setShadeColor(medium)
+        );
+      }
+    }
+  }
+  &-select {
+    text-align: center;
+    .product-btn {
+      height: emCal(16, 40);
+      width: emCal(16, 40);
+      padding: 0;
+      background-color: setColor(light);
+      color: setShadeColor(dark);
+      border: 0;
+      &.active {
+        background-color: setColor(green);
+        color: #fff;
+      }
+      &:hover {
+        background-color: setColor(green);
+        color: #fff;
+      }
+      &:not(:last-child) {
+        margin-right: emCal(16, 5);
+      }
+      i {
+        font-size: emCal(16, 14);
+      }
+    }
+  }
+  &-content {
+    text-align: center;
+  }
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: emCal(16, 30);
+  border: 1px solid setShadeColor(light);
+  transition: $transition;
+  height: 100%;
+  &:hover {
+    box-shadow: 0px 20px 32px 0 rgba(53, 78, 84, 0.15);
+    border-color: transparent;
+    .product-img {
+      .ant-btn {
+        bottom: 0;
+      }
+    }
+  }
+  .product-img {
+    flex: 1 1 30%;
+    max-width: 30%;
+    padding: emCal(16, 15);
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    @include mq(md) {
+      height: auto;
+      margin-bottom: emCal(14, 30);
+      .ant-btn {
+        bottom: 0;
+      }
+    }
+    a {
+      margin-bottom: 0;
+    }
+    .ant-btn {
+      position: absolute;
+      left: 0;
+      bottom: -100px;
+      width: 100%;
+      font-size: emCal(16, 13);
+      height: emCal(13, 40);
+      background-color: setColor(light);
+      color: setShadeColor(dark);
+      text-transform: uppercase;
+      border: 0;
+      &:hover {
+        background-color: setColor(green);
+        color: #fff;
+      }
+    }
+  }
+  &-content {
+    flex: 1 1 35%;
+    max-width: 35%;
+    padding-right: emCal(16, 15);
+    padding-left: emCal(16, 15);
+    @include mq(md) {
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: emCal(13, 30);
+    }
+    .product-rate {
+      margin-bottom: emCal(16, 15);
+    }
+    .product-description {
+      @include typo($color: setShadeColor(medium), $lh: emCal(16, 26));
+      margin-bottom: emCal(16, 30);
+    }
+    .product-availability {
+      @include typo(
+        $color: setShadeColor(medium),
+        $fsz: emCal(16, 14),
+        $fw: 500
+      );
+      &.-instock {
+        span {
+          color: setColor(green);
+        }
+      }
+      &.-outstock {
+        span {
+          color: red;
+        }
+      }
+    }
+  }
+  &-actions {
+    flex: 1 1 35%;
+    max-width: 35%;
+    padding-left: emCal(16, 30);
+    border-left: 1px solid setShadeColor(light);
+    @include mq(md) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .product-detail-content__actions {
+      .ant-btn {
+        height: emCal(13, 35);
+      }
+    }
+  }
+  @include mq(md) {
+    .product-img,
+    .product-list-content,
+    .product-list-actions {
+      @include mq(md) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

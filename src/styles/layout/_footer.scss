@@ -1,0 +1,164 @@
+.footer {
+  &-info {
+    &__logo {
+      display: inline-block;
+      margin-bottom: emCal(16, 20);
+      img {
+        @include imgCenter;
+      }
+    }
+    ul {
+      list-style: none;
+      margin-bottom: emCal(16, 15);
+      li {
+        @include typo(
+          $lh: emCal(16, 36),
+          $color: setShadeColor(medium),
+          $fw: 500
+        );
+      }
+    }
+    @include mq(md) {
+      text-align: center;
+    }
+  }
+  &-links {
+    &__group {
+      @include mq(md) {
+        text-align: center;
+      }
+      h5 {
+        @include typo($up: true, $fw: 600);
+        margin-bottom: emCal(16, 26);
+        margin-top: 1em;
+      }
+      ul {
+        list-style: none;
+        li {
+          &:not(:last-child) {
+            margin-bottom: emCal(16, 10);
+          }
+          a {
+            @include link($color: setShadeColor(medium), $fw: 500);
+          }
+        }
+      }
+    }
+  }
+  &-subcribe {
+    &__content {
+      h5 {
+        @include typo($fsz: emCal(16, 22), $color: #fff, $fw: 600);
+        margin-bottom: emCal(22, 10);
+      }
+      p {
+        @include typo($color: #fff, $lh: emCal(16, 24));
+      }
+      @include mq(md) {
+        margin-bottom: emCal(16, 30);
+      }
+    }
+    &__form {
+      display: flex;
+      align-items: center;
+      .ant-input {
+        height: emCal(16, 50);
+        border: 0;
+        border-radius: 999px 0 0 999px;
+        padding: 0 emCal(16, 30);
+      }
+      .ant-btn {
+        height: emCal(16, 50);
+        border-radius: 0 999px 999px 0;
+        background-color: #fff;
+        font-family: getFontWeight(600);
+        padding: 0 emCal(16, 30);
+        color: setColor(green);
+      }
+    }
+  }
+  &.-style-one {
+    &.-pink {
+      --green-color: #{setColor(pink)};
+      .footer-subcribe {
+        &__form {
+          .ant-input {
+            background-color: #ff9795;
+          }
+        }
+      }
+    }
+    &.-coffee {
+      --green-color: #{setColor(coffee)};
+      .footer-subcribe {
+        &__form {
+          .ant-input {
+            background-color: #ffbb67;
+          }
+        }
+      }
+    }
+    .footer-top {
+      padding-bottom: emCal(16, 60);
+    }
+    .footer-subcribe {
+      background-color: setColor(green);
+      padding: emCal(16, 30) 0;
+      .ant-input {
+        background-color: #98d25f;
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &-bottom {
+    padding: emCal(16, 15) 0;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      p {
+        @include typo($fw: 500, $color: setShadeColor(medium));
+        @include mq(md) {
+          margin-bottom: emCal(16, 10);
+        }
+      }
+      img {
+        @include imgCenter;
+        max-width: 256px;
+      }
+    }
+  }
+  &.-fluid {
+    .footer-top {
+      padding-bottom: emCal(16, 50);
+      border-bottom: 1px solid setShadeColor(light);
+    }
+    .footer-subcribe {
+      background-color: transparent;
+      &__content {
+        h5 {
+          color: setShadeColor(dark);
+          font-size: 1em;
+        }
+        p {
+          color: setShadeColor(medium);
+          margin-bottom: emCal(16, 20);
+        }
+      }
+      &__form {
+        .ant-input {
+          background-color: setColor(light);
+          &::placeholder {
+            color: setShadeColor(medium);
+          }
+        }
+        .ant-btn {
+          background-color: setColor(green);
+          color: #fff;
+        }
+      }
+    }
+  }
+}

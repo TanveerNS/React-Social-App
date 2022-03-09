@@ -1,0 +1,49 @@
+.testimonial-one {
+  padding: emCal(16, 30);
+  border: 1px solid setShadeColor(light);
+
+  &-item {
+    max-width: 99%;
+    text-align: center;
+
+    img {
+      @include imgCenter(emCal(16, 98), emCal(16, 98));
+      border-radius: 999px;
+      border: 1px solid setShadeColor(light);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: emCal(16, 20);
+    }
+    h3 {
+      @include typo($fw: 600, $up: true);
+      margin-bottom: emCal(16, 25);
+    }
+    p {
+      @include typo($lh: emCal(16, 26));
+      margin-bottom: emCal(16, 25);
+    }
+  }
+  .slick-dots {
+    list-style: none;
+    text-align: center;
+    margin-top: emCal(16, 55);
+    & > li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: emCal(16, 5);
+      }
+      div {
+        height: emCal(16, 8);
+        width: emCal(16, 8);
+        background-color: setShadeColor(light);
+        border-radius: 999px;
+      }
+      &.slick-active {
+        div {
+          width: emCal(16, 30);
+          background-color: setColor(pink);
+        }
+      }
+    }
+  }
+}

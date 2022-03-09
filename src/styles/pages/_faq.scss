@@ -1,0 +1,10 @@
+.faq {
+  margin-bottom: $section-spacing;
+  .ant-collapse {
+    .ant-collapse-item {
+      .ant-collapse-header {
+        @include typo($fsz: emCal(16, 18), $lh: emcal(18, 30));
+      }
+    }
+  }
+}

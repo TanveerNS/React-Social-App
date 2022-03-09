@@ -1,0 +1,72 @@
+.shop {
+  margin-bottom: $section-spacing;
+  &-sidebar {
+    @include mq(md) {
+      margin-bottom: emCal(14, 50);
+    }
+  }
+  &-table {
+    overflow-y: auto;
+    white-space: nowrap;
+    table {
+      width: 100%;
+      border: 1px solid setShadeColor(light);
+      thead {
+        tr {
+          th {
+            padding: 10px;
+            border-bottom: 1px solid setShadeColor(light);
+            text-align: center;
+            @include typo($fw: 600, $up: true);
+            &:last-child {
+              .ant-btn {
+                i {
+                  font-size: emCal(16, 12);
+                }
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 10px;
+            text-align: center;
+            &.table-img {
+              .table-img-wrapper {
+                background-color: setColor(light);
+                padding: emCal(16, 20);
+                display: inline-block;
+                img {
+                  @include imgCenter(emCal(16, 110), emCal(16, 110), contain);
+                }
+              }
+            }
+            &.table-name,
+            &.table-price,
+            &.table-total {
+              @include typo($fw: 600);
+            }
+            &.table-atc {
+              .ant-btn {
+                font-size: emCal(16, 14);
+                border: 0;
+                height: emCal(14, 35);
+                padding: 0 emCal(14, 20);
+                font-family: getFontWeight(600);
+              }
+            }
+            &.table-remove {
+              .ant-btn {
+                i {
+                  font-size: emCal(16, 12);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

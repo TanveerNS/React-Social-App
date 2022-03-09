@@ -1,0 +1,51 @@
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid setShadeColor(border);
+  margin-bottom: emCal(16, 30);
+  padding-bottom: emCal(16, 10);
+  &:after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: emCal(16, 70);
+    background-color: setColor(green);
+  }
+  h5 {
+    @include typo($fsz: emCal(16, 24), $fw: 600, $cpt: true);
+    @include mq(sm) {
+      margin-bottom: emCal(24, 15);
+    }
+  }
+  &-selectors {
+    .ant-select {
+      &:not(:last-child) {
+        margin-right: emCal(16, 10);
+      }
+      .ant-select-selector {
+        border-color: setShadeColor(light);
+        height: emCal(16, 40);
+        .ant-select-selection-item {
+          line-height: emCal(16, 40);
+        }
+      }
+    }
+  }
+  &-view {
+    a {
+      @include link($color: setShadeColor(regular));
+      &.active {
+        color: setColor(green);
+      }
+      &:not(:last-child) {
+        margin-right: emCal(16, 10);
+      }
+    }
+  }
+}

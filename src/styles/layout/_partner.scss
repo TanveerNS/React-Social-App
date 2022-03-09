@@ -1,0 +1,21 @@
+.partner-one {
+  margin-bottom: $section-spacing;
+  &-wrapper {
+    background-color: setShadeColor(border);
+    padding: emCal(16, 25) 0;
+    .slider-item {
+      text-align: center;
+      a {
+        display: inline-block;
+        &:hover {
+          img {
+            transform: scale(1.08);
+          }
+        }
+        img {
+          transition: $transition;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+//Overide antdesign default style
+@import "~antd/dist/antd.less";
+
+@primary-color: #88c74a;
+@font-family: "CeraPro Regular", sans-serif;
+@font-size-base: 16px;
+@text-selection-bg: pink;
+@rate-star-color: #efb11c;
+@rate-star-size: 14px;
+@zindex-tooltip: 99;
+@form-item-margin-bottom: 30px;
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector,
+.ant-input-affix-wrapper-focused {
+  box-shadow: none !important;
+}
+
+.ant-tooltip-inner {
+  font-size: 14px;
+}
+
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+  max-width: 80vw;
+}
+
+.ant-select-item-option-content {
+  text-transform: capitalize;
+}
+
+.ant-select-selection-item {
+  text-transform: capitalize;
+}
+
+.ant-select-item-option-content i {
+  margin-right: 10px;
+}
+
+.ant-back-top {
+  right: 50px;
+}
+
+.ant-message {
+  bottom: 20px;
+  top: initial;
+}
+
+.ant-message-notice {
+  text-align: left;
+}
+
+.ant-rate-star:not(:last-child) {
+  margin-right: 2px;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+.ant-modal {
+  max-width: 90vw;
+}
+
+.ant-btn-primary {
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+}
+
+.ant-btn-primary:hover {
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+  opacity: 0.8;
+}
+
+.ant-btn-primary:focus {
+  background-color: var(--green-color);
+  border-color: var(--green-color);
+  opacity: 0.8;
+}
+
+.ant-breadcrumb {
+  margin-bottom: 30/16em;
+}
+
+.ant-breadcrumb .ant-breadcrumb-link {
+  font-family: "CeraPro Bold";
+}
+
+.ant-breadcrumb .ant-breadcrumb-link i {
+  margin-right: 10px;
+}

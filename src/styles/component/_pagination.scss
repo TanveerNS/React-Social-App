@@ -1,0 +1,29 @@
+.ant-pagination {
+  &-item {
+    background-color: setColor(light);
+    border: 0;
+    border-radius: 0;
+    height: emCal(16, 40);
+    width: emCal(16, 40);
+    line-height: emCal(16, 40);
+    a {
+      font-family: getFontWeight(600);
+    }
+    &-active {
+      background-color: setColor(green);
+      a {
+        color: #fff;
+      }
+    }
+  }
+  line-height: emCal(16, 40);
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    @extend .ant-pagination-item;
+    .ant-pagination-item-link {
+      background-color: setColor(light);
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.header-function-menu {
+  &-one {
+    .function-menu-wrapper {
+      .search-form {
+        @include mq(md) {
+          margin-bottom: emCal(14, 15);
+        }
+      }
+    }
+  }
+  &-two {
+    .search-form {
+      @include mq(md) {
+        margin-bottom: emCal(14, 15);
+      }
+      &-input {
+        .ant-select {
+          &-selector {
+            .ant-select-selection-search {
+              .ant-input-group-wrapper {
+                .ant-input-wrapper {
+                  .ant-input-group-addon {
+                    button {
+                      padding: 0 emCal(16, 20);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .function-menu-contact {
+      @include mq(lg) {
+        display: none;
+      }
+      text-align: right;
+      i {
+        display: inline-block;
+        height: emCal(16, 35);
+        width: emCal(16, 35);
+        background-color: #fd5f5c2e;
+        text-align: center;
+        border-radius: 999px;
+        line-height: emCal(16, 35);
+        color: setColor(green);
+        margin-right: emCal(16, 5);
+      }
+      span {
+        @include typo($fsz: emCal(16, 22), $fw: 600);
+      }
+    }
+  }
+}

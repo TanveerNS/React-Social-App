@@ -1,0 +1,34 @@
+.section-title {
+  margin-bottom: remCal(35);
+  &.-left {
+    text-align: left;
+    .section-title-decoration {
+      margin-left: 0;
+    }
+  }
+  &.-center {
+    text-align: center;
+  }
+  &.-title-white {
+    h2 {
+      color: #fff;
+    }
+  }
+  &.-coffee {
+    --green-color: #{setColor(coffee)};
+  }
+  h2 {
+    @include typo($fsz: emCal(16, 44), $fw: 600);
+    @include mq(md) {
+      font-size: emCal(14, 30);
+    }
+  }
+  &-decoration {
+    width: 80px;
+    height: 3px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    background-color: setColor(green);
+  }
+}

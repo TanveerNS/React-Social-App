@@ -1,0 +1,19 @@
+.header {
+  margin-bottom: $section-spacing;
+  &.-no-space {
+    margin-bottom: 0;
+  }
+  &.-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  &.-pink {
+    --green-color: #{setColor(pink)};
+  }
+  &.-coffee {
+    --green-color: #{setColor(coffee)};
+  }
+}

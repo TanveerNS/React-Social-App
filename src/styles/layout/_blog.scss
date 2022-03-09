@@ -1,0 +1,9 @@
+.blog-slide {
+  margin-bottom: $section-spacing;
+  &-content {
+    margin: 0 emCal(16, -15);
+    .slide-item {
+      padding: 0 emCal(16, 15);
+    }
+  }
+}

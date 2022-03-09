@@ -1,0 +1,60 @@
+.contact {
+  margin-bottom: $section-spacing;
+  &-map {
+    margin-bottom: $section-spacing;
+  }
+  &-methods {
+    margin-bottom: $section-spacing;
+    &-item {
+      text-align: center;
+      @include mq(md) {
+        margin-bottom: emCal(14, 30);
+      }
+      i {
+        font-size: emCal(16, 40);
+        color: setColor(green);
+        margin-bottom: emCal(40, 35);
+      }
+      p {
+        @include typo($fsz: emCal(16, 18), $lh: emCal(18, 36));
+        span {
+          color: setShadeColor(regular);
+        }
+      }
+    }
+  }
+  &-form {
+    &__title {
+      margin-bottom: emCal(16, 40);
+      .section-title {
+        margin-bottom: emCal(16, 15);
+        h2 {
+          font-size: emCal(16, 36);
+        }
+      }
+      text-align: center;
+    }
+    .ant-form-item {
+      &-control {
+        &-input {
+          &-content {
+            .ant-input {
+              height: emCal(16, 45);
+              border-color: setShadeColor(light);
+            }
+            textarea.ant-input {
+              height: emCal(16, 100);
+            }
+          }
+        }
+      }
+      .ant-btn {
+        width: 100%;
+        height: emCal(16, 45);
+        padding: 0 emCal(16, 30);
+        text-transform: uppercase;
+        font-family: getFontWeight(600);
+      }
+    }
+  }
+}

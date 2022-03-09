@@ -1,0 +1,53 @@
+.arrow-center {
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    padding: 0;
+    &.slick-next {
+      right: emCal(16, 30);
+    }
+    &.slick-prev {
+      left: emCal(16, 30);
+    }
+  }
+}
+
+.zoom-in {
+  overflow: hidden;
+  display: inline-block;
+  img {
+    @include imgCenter;
+    transition: $transition;
+  }
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.up-down-anim {
+  animation: upDown 1s infinite;
+}
+
+.up-down-anim-hover {
+  &:hover {
+    img {
+      animation: upDown 1s infinite;
+    }
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

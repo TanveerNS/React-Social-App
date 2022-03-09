@@ -1,0 +1,136 @@
+.banner-one {
+  margin-bottom: remCal(100);
+  &-item {
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    padding: emCal(16, 30) emCal(16, 15);
+    &__img {
+      text-align: center;
+      @include mq(md) {
+        display: none;
+      }
+      img {
+        @include imgCenter($height: emCal(16, 190), $type: contain);
+      }
+    }
+    &__content {
+      p {
+        @include typo($fsz: emCal(16, 30), $lh: emCal(30, 36));
+        margin-bottom: emCal(30, 15);
+        span {
+          font-family: getFontWeight(600);
+        }
+      }
+      .ant-btn {
+        height: emCal(16, 45);
+        padding: 0 emCal(16, 30);
+      }
+    }
+  }
+}
+
+.banner-two {
+  --green-color: var(--pink-color);
+  padding: emCal(16, 40);
+  background: {
+    image: url("/assets/images/sections/banner/two/bg.png");
+    size: cover;
+    position: center;
+  }
+  margin-bottom: emCal(16, 30);
+  &-content {
+    &__discount {
+      display: flex;
+      align-items: center;
+      margin-bottom: emCal(16, 10);
+      h2 {
+        @include typo($fsz: emCal(16, 62), $fw: 600, $color: setColor(green));
+        margin-right: emCal(16, 5);
+      }
+      h3 {
+        @include typo($fsz: emCal(16, 24), $fw: 600, $up: true);
+        span {
+          color: setColor(green);
+        }
+      }
+    }
+    &__description {
+      @include typo($lh: emCal(16, 24), $color: setShadeColor(medium));
+      margin-bottom: emCal(16, 15);
+    }
+    .ant-btn {
+      font-size: emCal(16, 13);
+      font-family: getFontWeight(600);
+      text-transform: uppercase;
+      height: emCal(16, 45);
+      padding: 0 emCal(16, 30);
+    }
+  }
+}
+
+.banner-three {
+  &-item {
+    padding: emCal(16, 30);
+    background: {
+      size: cover;
+      position: center;
+    }
+  }
+  &-image {
+    img {
+      @include imgCenter($height: emCal(16, 115), $type: contain);
+    }
+  }
+  &-content {
+    &__discount {
+      h3 {
+        @include typo($fsz: emCal(16, 24), $lh: emCal(16, 22));
+        margin-bottom: emCal(24, 10);
+        b,
+        span {
+          font-family: getFontWeight(600);
+        }
+        span {
+          color: setColor(green);
+        }
+      }
+    }
+    .ant-btn {
+      font-size: emCal(16, 13);
+      font-family: getFontWeight(600);
+      text-transform: uppercase;
+      height: emCal(16, 45);
+      padding: 0 emCal(16, 30);
+    }
+  }
+}
+
+.banner-four {
+  --green-color: #{setColor(coffee)};
+  margin-bottom: $section-spacing;
+  &-item {
+    overflow: hidden;
+    padding: emCal(16, 15) 0;
+    background: {
+      size: cover;
+      position: center;
+    }
+    img {
+      @include imgCenter($height: emCal(16, 180), $type: contain);
+    }
+    &.-small {
+      text-align: center;
+    }
+    &.-big {
+      h5 {
+        @include typo($fsz: emCal(16, 30), $lh: emCal(30, 48), $fw: 600);
+        span {
+          color: red;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.checkout {
+  margin-bottom: $section-spacing;
+  &-form {
+    .ant-form-item {
+      &-control {
+        &-input {
+          &-content {
+            .ant-input {
+              height: emCal(16, 45);
+              border: 0;
+              background-color: setColor(light) !important;
+            }
+            textarea.ant-input {
+              height: emCal(16, 120);
+              resize: none;
+            }
+            .ant-select {
+              &-selector {
+                background-color: setColor(light);
+                height: emCal(16, 45);
+                .ant-select-selection-search {
+                  input {
+                    height: emCal(16, 45);
+                  }
+                }
+                .ant-select-selection-item {
+                  line-height: emCal(16, 45);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-total {
+    &__table {
+      margin-bottom: emCal(16, 30);
+      width: 100%;
+      tr {
+        th,
+        td {
+          padding: 20px 10px;
+        }
+        &:not(:last-child) {
+          th,
+          td {
+            border: 1px solid setShadeColor(light);
+            border-width: 1px 0 1px 0;
+            padding: 20px 10px;
+          }
+        }
+
+        th {
+          @include typo($fw: 600, $color: setShadeColor(medium));
+        }
+        td {
+          &.-bold {
+            font-family: getFontWeight(600);
+          }
+          &.-color {
+            color: setColor(green);
+          }
+          &:last-child {
+            text-align: right;
+          }
+          p {
+            @include typo($fw: 400, $lh: emCal(16, 24));
+          }
+        }
+      }
+    }
+    &__footer {
+      margin-bottom: emCal(16, 30);
+      .ant-radio-group {
+        .ant-radio-wrapper {
+          &:not(:last-child) {
+            margin-bottom: emCal(16, 10);
+          }
+        }
+      }
+    }
+    .checkout-sumbit {
+      height: emCal(16, 45);
+      font-family: getFontWeight(600);
+      text-transform: uppercase;
+      width: 100%;
+    }
+  }
+  &-title {
+    @include typo($fsz: emCal(16, 18), $fw: 600);
+    margin-bottom: emCal(18, 30);
+  }
+}

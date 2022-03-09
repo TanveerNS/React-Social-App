@@ -1,0 +1,121 @@
+.cart {
+  margin-bottom: $section-spacing;
+  .shop-table {
+    margin-bottom: emCal(16, 30);
+  }
+  &-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: emCal(16, 50);
+    &__promo {
+      @include mq(sm) {
+        margin-bottom: emCal(16, 15);
+        width: 100%;
+      }
+      .ant-form {
+        display: flex;
+        @include mq(sm) {
+          width: 100%;
+        }
+        &-item {
+          margin-bottom: 0;
+          &:first-child {
+            margin-right: emCal(16, 15);
+            @include mq(sm) {
+              flex-grow: 1;
+            }
+          }
+          &-control {
+            &-input {
+              &-content {
+                .ant-btn {
+                  font-size: emCal(16, 14);
+                  height: emCal(14, 45);
+                  background-color: setColor(light);
+                  border: 0;
+                  color: setShadeColor(dark);
+                  font-family: getFontWeight(600);
+                  padding: 0 emCal(14, 30);
+                  text-transform: uppercase;
+                }
+                input {
+                  height: emCal(16, 45);
+                  border: 1px solid setShadeColor(light);
+                  border-width: 0 0 1px 0;
+
+                  &:hover,
+                  &:focus {
+                    border-right-width: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__update {
+      font-size: emCal(16, 14);
+      height: emCal(14, 45);
+      background-color: setShadeColor(dark);
+      border: 0;
+      color: #fff;
+      font-family: getFontWeight(600);
+      padding: 0 emCal(14, 30);
+      text-transform: uppercase;
+      @include mq(sm) {
+        width: 100%;
+      }
+    }
+  }
+  &-total {
+    max-width: 100%;
+    width: emCal(16, 360);
+    margin-left: auto;
+    h5 {
+      @include typo($fsz: emCal(16, 18), $fw: 600, $up: true);
+      margin-bottom: emCal(18, 30);
+    }
+    table {
+      margin-bottom: emCal(16, 30);
+      border: 1px solid setShadeColor(light);
+      width: 100%;
+      tr {
+        th,
+        td {
+          border: 1px solid setShadeColor(light);
+          border-width: 1px 0 1px 0;
+          padding: 20px 10px;
+        }
+        th {
+          @include typo($fw: 600, $color: setShadeColor(medium));
+        }
+        td {
+          @include typo($fw: 600);
+          p {
+            @include typo($fw: 400, $lh: emCal(16, 24));
+          }
+        }
+      }
+    }
+    &__checkout {
+      .ant-btn {
+        height: emCal(16, 45);
+        width: 100%;
+        &.ant-btn-link {
+          color: setShadeColor(regular);
+          &:hover {
+            color: setColor(green);
+          }
+        }
+      }
+      span {
+        display: block;
+        text-align: center;
+        color: setShadeColor(regular);
+      }
+    }
+  }
+}

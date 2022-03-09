@@ -1,0 +1,85 @@
+.search-form {
+  border: 1px solid setShadeColor(border);
+  &-wrapper {
+    display: flex;
+    align-items: center;
+
+    .search-form {
+      &-select {
+        border-right: 1px solid setShadeColor(border);
+        max-width: 25%;
+        flex: 1 1 25%;
+        .ant-select {
+          width: 100%;
+          &-selector {
+            border: 0;
+            height: emCal(16, 50);
+            width: 100%;
+            .ant-select-selection-search {
+              input {
+                height: emCal(16, 50);
+              }
+            }
+            .ant-select-selection-item {
+              font-size: 1em;
+              line-height: emCal(16, 50);
+            }
+          }
+        }
+      }
+      &-input {
+        flex: 1 1 75%;
+        max-width: 75%;
+        .ant-select {
+          width: 100%;
+          &-selector {
+            height: emCal(16, 50);
+            .ant-select-selection-search {
+              .ant-input-group-wrapper {
+                height: 100%;
+                .ant-input-wrapper {
+                  font-size: 1em;
+                  height: 100%;
+                  input {
+                    height: 100%;
+                    &::placeholder {
+                      font-size: emCal(16, 14);
+                    }
+                  }
+                  .ant-input-group-addon {
+                    button {
+                      height: 100%;
+                      border-radius: 0;
+                      border: 0;
+                      font-size: 1em;
+                      font-family: getFontWeight(600);
+                      text-transform: uppercase;
+                      padding: 0 emCal(16, 30);
+                      background-color: setColor(green);
+                      &:hover {
+                        opacity: 0.9;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include mq(sm) {
+      .search-form {
+        &-select {
+          max-width: 25%;
+          flex: 1 1 25%;
+        }
+        &-input {
+          max-width: 75%;
+          flex: 1 1 75%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.product-tab {
+  margin-bottom: $section-spacing;
+  &.-pink {
+    --green-color: #{setColor(pink)};
+  }
+  &.-coffee {
+    --green-color: #{setColor(coffee)};
+  }
+  &-header {
+    &.-small {
+      .section-title {
+        h2 {
+          font-size: emCal(16, 24);
+        }
+      }
+    }
+    .ant-tabs {
+      overflow: visible;
+      &-nav {
+        margin-bottom: emCal(16, 40);
+        @include mq(md) {
+          flex-wrap: wrap;
+        }
+        .ant-tabs-ink-bar {
+          height: emCal(16, 3);
+          background-color: setColor(green);
+        }
+        .ant-tabs-tab {
+          &-btn {
+            font-family: getFontWeight(600);
+            text-transform: capitalize;
+            color: setShadeColor(regular);
+          }
+          &.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+              color: setColor(green);
+            }
+          }
+        }
+      }
+    }
+    &.-style-one {
+      .ant-tabs {
+        &-nav {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+    &.-style-two {
+      .ant-tabs {
+        &-nav {
+          .ant-tabs-extra-content {
+            @include mq(lg) {
+              margin-right: emCal(16, 30);
+            }
+          }
+          &-wrap {
+            justify-content: flex-end;
+            @include mq(lg) {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+      .section-title {
+        margin-bottom: emCal(16, 10);
+      }
+      &.-small {
+        .section-title {
+          margin-bottom: 0;
+        }
+      }
+      &.-underline {
+        position: relative;
+        .section-title {
+          &:after {
+            content: "";
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            display: inline-block;
+            height: 3px;
+            width: emCal(16, 70);
+            background-color: setColor(green);
+          }
+          @include mq(md) {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-grid {
+  margin-bottom: $section-spacing;
+  &.-pink {
+    --green-color: var(--pink-color);
+  }
+  &-header {
+    border-bottom: 1px solid setShadeColor(border);
+    margin-bottom: emCal(16, 30);
+    &.-small {
+      .section-title {
+        h2 {
+          font-size: emCal(16, 24);
+        }
+      }
+    }
+    &.-underline {
+      position: relative;
+      .section-title {
+        margin-bottom: emCal(16, 15);
+        &:after {
+          content: "";
+          left: 0;
+          bottom: 0;
+          position: absolute;
+          display: inline-block;
+          height: 3px;
+          width: emCal(16, 70);
+          background-color: setColor(green);
+        }
+      }
+    }
+  }
+  &-content {
+    .five-col {
+      @media (min-width: 1400px) {
+        flex: 1 1 20%;
+        max-width: 20%;
+      }
+    }
+  }
+  .section-title {
+    margin-bottom: emCal(16, 10);
+  }
+}
+
+.product-slide {
+  margin-bottom: $section-spacing;
+  &.-pink {
+    --green-color: var(--pink-color);
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid setShadeColor(light);
+    padding-bottom: emCal(16, 10);
+    margin-bottom: emCal(16, 30);
+    &.-round-arrows {
+      .product-slide-header__controller {
+        .ant-btn {
+          height: emCal(16, 20);
+          width: emCal(16, 20);
+          border-radius: 999px;
+          background-color: transparent;
+          color: setShadeColor(dark);
+          border: 1px solid setShadeColor(light);
+        }
+      }
+    }
+    &.-no-border {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    &.-underline {
+      position: relative;
+      h5 {
+        &:after {
+          content: "";
+          left: 0;
+          bottom: 0;
+          position: absolute;
+          display: inline-block;
+          height: 3px;
+          width: emCal(16, 70);
+          background-color: setColor(green);
+        }
+      }
+    }
+    h5 {
+      @include typo($fsz: emCal(16, 24), $fw: 600);
+    }
+    &__controller {
+      .ant-btn {
+        height: emCal(16, 20);
+        width: emCal(16, 20);
+        line-height: emCal(16, 20);
+        padding: 0;
+        i {
+          font-size: emCal(16, 14);
+        }
+        &:not(:last-child) {
+          margin-right: emCal(16, 5);
+        }
+      }
+    }
+  }
+  &-content {
+    margin: 0 emCal(16, -15);
+    .slide-item {
+      padding: 0 emCal(16, 15);
+    }
+  }
+}

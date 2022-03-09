@@ -1,0 +1,37 @@
+.blog-sidebar {
+  &-section {
+    margin-bottom: emCal(16, 45);
+    &__header {
+      position: relative;
+      padding-bottom: emCal(16, 15);
+      border-bottom: 1px solid setShadeColor(light);
+      margin-bottom: emCal(16, 20);
+      &:after {
+        content: "";
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        width: emCal(16, 70);
+        background-color: setColor(green);
+      }
+      h5 {
+        @include typo($fsz: emCal(16, 24), $fw: 600);
+      }
+    }
+    &.-categories {
+      @extend .shop-sidebar-section, .-departments;
+    }
+    &.-recent-post {
+      .post-tiny {
+        &:not(:last-child) {
+          margin-bottom: emCal(16, 10);
+        }
+      }
+    }
+    &.-tags {
+      @extend .shop-sidebar-section, .-tags;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@function remCal($size) {
+  @if ($size == "auto" or $size == "100%") {
+    @return $size;
+  }
+  @return ($size/$rem-baseline) * 1rem;
+}
+
+@function emCal($em, $size) {
+  @return ($size/$em) * 1em;
+}
+
+@function setColor($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+    // @return var(--color-#{$color});
+  } @else {
+    @return $color;
+  }
+}
+
+@function setShadeColor($color) {
+  @if map-has-key($shades, $color) {
+    @return map-get($shades, $color);
+  } @else {
+    @return $color;
+  }
+}
+
+@function getFontWeight($weight) {
+  @if map-has-key($font-weight, $weight) {
+    @return map-get($font-weight, $weight);
+  } @else {
+    @return "CeraPro Regular";
+  }
+}

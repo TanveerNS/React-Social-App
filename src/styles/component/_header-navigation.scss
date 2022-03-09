@@ -1,0 +1,90 @@
+.navigation {
+  display: inline-block;
+  @include mq(md) {
+    display: none;
+  }
+  &-item {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    &.-toggleable {
+      .navigation-item__title {
+        &:after {
+          content: "\33";
+          font-family: "ElegantIcons";
+          margin-left: emCal(16, 10);
+        }
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+      .menu-item {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:hover {
+      & > a {
+        color: setColor(green);
+      }
+      .navigation-item__submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &__title {
+      @include typo($fw: 600);
+      text-transform: uppercase;
+      padding: 10px 0;
+
+      &.active {
+        color: setColor(green);
+      }
+    }
+    &__submenu {
+      position: absolute;
+      min-width: emCal(16, 270);
+      opacity: 0;
+      visibility: hidden;
+      padding: emCal(16, 20) emCal(16, 30);
+      background-color: #fff;
+      box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      transition: $transition;
+      border-radius: 5px;
+      li {
+        display: block;
+        padding: emCal(16, 10) 0;
+        a {
+          @include link(
+            $color: setShadeColor(medium),
+            $hvr-color: setColor(green),
+            $fw: 500,
+            $cpt: true
+          );
+        }
+      }
+      &.-wide {
+        padding: 30px;
+        min-width: emCal(16, 700);
+        left: -100px;
+        display: flex;
+        .navigation-item__submenu-group {
+          margin-right: emCal(16, 65);
+          h5 {
+            @include typo(
+              $fsz: emCal(16, 18),
+              $color: setShadeColor(title),
+              $fw: 600
+            );
+            margin-bottom: emCal(16, 15);
+          }
+        }
+      }
+    }
+  }
+}

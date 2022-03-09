@@ -1,0 +1,44 @@
+.category-collapse {
+  position: relative;
+  width: 100%;
+  height: emCal(16, 50);
+  z-index: 10;
+  .ant-collapse {
+    &-item {
+      border-bottom: 0;
+      .ant-collapse-header {
+        @include typo(
+          $fsz: emCal(16, 18),
+          $lh: emCal(18, 50),
+          $fw: 600,
+          $color: #fff
+        );
+        background-color: setColor(green);
+        padding: 0 emCal(18, 15);
+        height: emCal(18, 50);
+        .ant-collapse-extra {
+          float: left;
+          margin-right: 10%;
+        }
+      }
+      .ant-collapse-content {
+        &-box {
+          padding: emCal(16, 14) !important;
+          ul {
+            list-style: none;
+            & > li {
+              display: block;
+              width: 100%;
+              border-bottom: 1px dashed setShadeColor(light);
+              padding: 10px 0;
+              a {
+                @include link($color: setShadeColor(medium), $fw: 500);
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

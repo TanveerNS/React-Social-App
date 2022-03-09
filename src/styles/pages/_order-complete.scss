@@ -1,0 +1,11 @@
+.order-complete {
+  margin-bottom: $section-spacing;
+  text-align: center;
+  padding: emCal(16, 70) 0;
+  h1 {
+    @include typo($fsz: emCal(16, 27), $lh: emCal(27, 35), $fw: 600);
+    span {
+      color: setColor(green);
+    }
+  }
+}

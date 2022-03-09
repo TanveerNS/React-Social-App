@@ -1,0 +1,26 @@
+.blog {
+  margin-bottom: $section-spacing;
+  &-content {
+    .post {
+      margin-bottom: emCal(16, 30);
+    }
+  }
+  &-masonry {
+    margin-bottom: $section-spacing;
+    &-content {
+      column-count: 3;
+      column-gap: emCal(16, 30);
+      @include mq(lg) {
+        column-count: 2;
+        column-gap: (emCal(16, 15));
+      }
+      @include mq(sm) {
+        column-count: 1;
+        column-gap: 0;
+      }
+      .post {
+        display: inline-block;
+      }
+    }
+  }
+}

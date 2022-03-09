@@ -1,0 +1,5 @@
+:root {
+  @each $name, $value in $root-color {
+    --#{$name}-color: #{$value};
+  }
+}

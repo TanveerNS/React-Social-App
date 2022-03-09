@@ -1,0 +1,36 @@
+.social-icons {
+  list-style: none;
+  display: inline-block;
+  &.-white {
+    li {
+      .ant-btn-link {
+        color: #fff;
+      }
+    }
+  }
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: emCal(16, 10);
+    }
+    .ant-btn {
+      padding: 0;
+    }
+    .ant-btn-link {
+      @include link;
+      height: auto;
+    }
+    .ant-btn-primary {
+      background-color: setColor(light);
+      color: setShadeColor(medium);
+      border: 0;
+      height: emCal(16, 40);
+      width: emCal(16, 40);
+      line-height: emCal(16, 40);
+      &:hover {
+        background-color: setColor(green);
+        color: #fff;
+      }
+    }
+  }
+}

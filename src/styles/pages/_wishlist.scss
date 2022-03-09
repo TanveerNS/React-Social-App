@@ -1,0 +1,15 @@
+.wishlist {
+  margin-bottom: $section-spacing;
+  .shop-table {
+    margin-bottom: emCal(16, 15);
+  }
+  &-btn {
+    font-size: emCal(16, 13);
+    height: emCal(13, 45);
+    padding: 0 emCal(13, 20);
+    background-color: setShadeColor(dark);
+    border: 0;
+    text-transform: uppercase;
+    font-family: getFontWeight(600);
+  }
+}

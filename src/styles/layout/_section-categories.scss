@@ -1,0 +1,39 @@
+.categories-one {
+  margin-bottom: $section-spacing;
+  .categories-one-item {
+    display: block;
+    text-align: center;
+    border: 1px solid #d0faa3;
+    padding: emCal(16, 30) emCal(16, 10);
+    .categories-one-item__image {
+      position: relative;
+      display: inline-block;
+      margin-bottom: emCal(16, 30);
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: emCal(16, 200);
+        font-family: getFontWeight(600);
+        color: #eaf5e4;
+        line-height: emCal(200, 150);
+        z-index: -1;
+      }
+      img {
+        @include imgCenter(
+          $height: emCal(16, 150),
+          $width: emCal(16, 150),
+          $type: contain
+        );
+      }
+    }
+    h2 {
+      @include typo($fsz: emCal(16, 24), $fw: 600);
+      margin-bottom: emCal(24, 10);
+    }
+    p {
+      @include typo($fsz: emCal(16, 12), $color: setColor(green), $fw: 500);
+    }
+  }
+}

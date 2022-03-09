@@ -1,0 +1,29 @@
+.error {
+  margin-bottom: $section-spacing;
+  &-content {
+    @include mq(md) {
+      margin-bottom: emCal(14, 50);
+    }
+    h2 {
+      @include typo($fsz: emCal(16, 48), $lh: emCal(48, 60), $fw: 600);
+      margin-bottom: emCal(48, 30);
+    }
+    p {
+      @include typo($lh: emCal(16, 30));
+      margin-bottom: emCal(16, 40);
+    }
+    .ant-btn {
+      font-size: emCal(16, 14);
+      height: emCal(14, 45);
+      text-transform: uppercase;
+      font-family: getFontWeight(600);
+      padding: 0 emCal(14, 30);
+    }
+  }
+  &-img {
+    img {
+      @include imgCenter($type: contain);
+      // max-width: 100%;
+    }
+  }
+}

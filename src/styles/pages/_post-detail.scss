@@ -1,0 +1,118 @@
+.post-detail {
+  &-content {
+    margin-bottom: emCal(16, 50);
+
+    &__main {
+      .post-detail-title {
+        @include typo($fsz: emCal(16, 36), $lh: emCal(36, 48), $fw: 600);
+        margin-bottom: emCal(36, 10);
+      }
+      .post-detail-paragraph {
+        @include typo($lh: emCal(16, 30));
+        margin-bottom: emCal(16, 20);
+      }
+      .post-detail-subtitle {
+        @include typo($fsz: emCal(16, 24), $lh: emCal(24, 36), $fw: 600);
+        margin-bottom: emCal(24, 20);
+      }
+      .post-detail-image {
+        margin-bottom: emCal(16, 20);
+        img {
+          @include imgCenter;
+        }
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-bottom: emCal(16, 20);
+      border-bottom: 1px solid setShadeColor(light);
+      margin-bottom: emCal(16, 30);
+      &-tags {
+        .ant-btn {
+          height: emCal(16, 30);
+          padding: 0 emCal(16, 10);
+          margin-right: emCal(16, 10);
+          border: 0;
+          background-color: setColor(light);
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  &-comment {
+    &__title {
+      @include typo($fsz: emCal(16, 24), $color: setShadeColor(medium));
+      margin-bottom: emCal(24, 40);
+    }
+    &__new {
+      .ant-form {
+        color: red;
+        .ant-form-item {
+          &-control {
+            &-input {
+              &-content {
+                .ant-input {
+                  height: emCal(16, 45);
+                  border: 1px solid setShadeColor(light);
+                }
+                textarea.ant-input {
+                  height: emCal(16, 120);
+                  resize: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .ant-btn {
+        font-size: emCal(16, 14);
+        height: emCal(14, 45);
+        font-family: getFontWeight(600);
+        text-transform: uppercase;
+        padding: 0 emCal(14, 30);
+      }
+    }
+    &__item {
+      display: flex;
+      &-avatar {
+        margin-right: emCal(16, 30);
+        img {
+          @include imgCenter($height: emCal(16, 80), $width: emCal(16, 80));
+        }
+      }
+      &-content {
+        h5 {
+          @include typo($fsz: emCal(16, 14), $color: setShadeColor(regular));
+          letter-spacing: emCal(14, 2.4);
+          margin-bottom: emCal(14, 10);
+        }
+        h3 {
+          @include typo($fsz: emCal(16, 18), $fw: 600);
+          margin-bottom: emCal(18, 15);
+        }
+        p {
+          @include typo($lh: emCal(16, 24));
+          margin-bottom: emCal(16, 15);
+        }
+        &__button {
+          .ant-btn {
+            font-size: emCal(16, 13);
+            height: emCal(13, 30);
+            padding: 0 emCal(13, 15);
+            font-family: getFontWeight(600);
+            border-color: setShadeColor(regular);
+            text-transform: uppercase;
+            &:not(:last-child) {
+              margin-right: emCal(13, 5);
+            }
+          }
+        }
+        &__reply {
+          margin-top: emCal(16, 40);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.shop-sidebar {
+  &-section {
+    margin-bottom: emCal(16, 45);
+    &__header {
+      position: relative;
+      padding-bottom: emCal(16, 15);
+      border-bottom: 1px solid setShadeColor(light);
+      margin-bottom: emCal(16, 20);
+      &:after {
+        content: "";
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        width: emCal(16, 70);
+        background-color: setColor(green);
+      }
+      h5 {
+        @include typo($fsz: emCal(16, 24), $fw: 600);
+      }
+    }
+
+    &.-departments {
+      ul {
+        list-style: none;
+        li {
+          &.active {
+            a {
+              color: setColor(green);
+            }
+          }
+          a {
+            @include link(
+              $cpt: true,
+              $color: setShadeColor(medium),
+              $lh: emCal(16, 32)
+            );
+          }
+        }
+      }
+    }
+    &.-colors {
+      ul {
+        list-style: none;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        li {
+          &.active {
+            a {
+              color: setColor(green);
+            }
+          }
+          a {
+            @include link(
+              $cpt: true,
+              $color: setShadeColor(medium),
+              $lh: emCal(16, 32)
+            );
+            span {
+              height: emCal(16, 16);
+              width: emCal(16, 16);
+              border-radius: 999px;
+              display: inline-block;
+              margin-right: emCal(16, 10);
+              border: 1px solid setShadeColor(border);
+            }
+          }
+        }
+      }
+    }
+    &.-size {
+      @extend .shop-sidebar-section, .-colors;
+    }
+    &.-tags {
+      .ant-btn {
+        // font-size: emCal(16, 12);
+        height: emCal(16, 30);
+        padding: 0 emCal(16, 10);
+        margin: 0 emCal(16, 10) emCal(16, 10) 0;
+        border: 0;
+        background-color: setColor(light);
+        text-transform: capitalize;
+        &.active {
+          background-color: setColor(green);
+          color: #fff;
+        }
+        &:hover {
+          background-color: setColor(green);
+          color: #fff;
+        }
+      }
+    }
+  }
+}

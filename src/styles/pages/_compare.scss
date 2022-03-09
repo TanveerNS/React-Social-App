@@ -1,0 +1,80 @@
+.compare {
+  margin-bottom: $section-spacing;
+  &-table {
+    overflow-y: auto;
+    white-space: nowrap;
+    table {
+      width: 100%;
+      tbody {
+        tr {
+          &:not(:last-child) {
+            th,
+            td {
+              border-bottom: 1px solid setShadeColor(light);
+            }
+          }
+          th,
+          td {
+            padding: emCal(16, 15);
+          }
+          th {
+            border-right: 1px solid setShadeColor(light);
+            text-align: center;
+            @include typo($fw: 600, $up: true);
+          }
+          td {
+            @include typo($fw: 500, $color: setShadeColor(medium), $cpt: true);
+            &:not(:last-child) {
+              border-right: 1px solid setShadeColor(light);
+            }
+            text-align: center;
+            &.compare-item {
+              img {
+                @include imgCenter($height: emCal(16, 105), $type: contain);
+                margin-bottom: emCal(16, 10);
+              }
+              h3 {
+                @include typo($fw: 600, $fsz: emCal(16, 18));
+              }
+            }
+            &.compare-price {
+              color: setColor(green);
+            }
+            &.compare-atc {
+              .ant-btn {
+                &[disabled] {
+                  cursor: not-allowed;
+                  color: setShadeColor(light);
+                  &:hover {
+                    color: setShadeColor(light);
+                  }
+                }
+                @include link(
+                  $up: true,
+                  $fw: 600,
+                  $color: setShadeColor(medium)
+                );
+              }
+            }
+            &.compare-color {
+              div {
+                height: emCal(16, 10);
+                width: emCal(16, 10);
+                border-radius: 999px;
+                display: inline-block;
+              }
+            }
+            &.compare-availability {
+              &.-avaiable {
+                color: setColor(green);
+              }
+              &.outstock {
+                color: red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

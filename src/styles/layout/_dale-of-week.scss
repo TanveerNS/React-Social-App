@@ -1,0 +1,192 @@
+.dow-one {
+  margin-bottom: $section-spacing;
+  .section-title {
+    margin-bottom: emCal(16, 100);
+  }
+  &-image {
+    @include imgCenter($type: contain);
+    @include mq(md) {
+      display: none;
+    }
+  }
+  &-content {
+    margin-bottom: remCal(60);
+    &__item {
+      $dale-item-margin: emCal(16, 15);
+      display: flex;
+      align-items: center;
+      &-content {
+        margin-left: $dale-item-margin;
+        h5 {
+          @include typo($fsz: emCal(16, 18), $fw: 600);
+          margin-bottom: emCal(18, 10);
+        }
+        p {
+          @include typo($lh: emCal(16, 24), $color: setShadeColor(medium));
+        }
+      }
+      &-image {
+        border-radius: 999px;
+        background-color: setColor(light);
+        height: emCal(16, 55);
+        width: emCal(16, 55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        float: right;
+      }
+      &.-reverse {
+        flex-direction: row-reverse;
+        .dow-one-content__item-content {
+          text-align: right;
+          margin-left: 0;
+          margin-right: $dale-item-margin;
+        }
+        @include mq(md) {
+          flex-direction: row;
+          .dow-one-content__item-content {
+            text-align: left;
+            margin-left: $dale-item-margin;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  &-countdown {
+    display: flex;
+    justify-content: center;
+    &-item {
+      &:not(:last-child) {
+        margin-right: emCal(16, 15);
+      }
+      border: 2px solid setShadeColor(light);
+      border-radius: emCal(16, 10);
+      text-align: center;
+      padding: emCal(16, 5) emCal(16, 12);
+      h6 {
+        @include typo($fsz: emCal(16, 30), $fw: 600, $color: setColor(green));
+      }
+    }
+  }
+}
+
+.dow-two {
+  margin-bottom: $section-spacing;
+  background: {
+    image: url("/assets/images/sections/dale-of-week/two/bg.png");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
+  padding: emCal(16, 50) 0;
+  &-content {
+    text-align: center;
+    @include mq(md) {
+      margin-bottom: emCal(14, 50);
+    }
+    .section-title {
+      margin-bottom: emCal(16, 18);
+    }
+    p {
+      @include typo($color: setShadeColor(medium));
+      margin-bottom: emCal(16, 20);
+    }
+  }
+  &-countdown {
+    @extend .dow-one-countdown;
+    margin-bottom: emCal(16, 30);
+    &-item {
+      @extend .dow-one-countdown-item;
+      border: 0;
+      background-color: #fff;
+      span {
+        @include typo($fsz: emCal(16, 12), $up: true, $fw: 600);
+      }
+    }
+  }
+  .ant-btn {
+    font-size: emCal(16, 14);
+    height: emCal(14, 45);
+    font-family: getFontWeight(600);
+    text-transform: uppercase;
+    padding: 0 emCal(14, 30);
+  }
+  &-img {
+    @include mq(lg) {
+      display: none;
+    }
+    @include mq(sm) {
+      display: block;
+    }
+    img {
+      @include imgCenter($type: contain);
+    }
+  }
+}
+
+.dow-three {
+  --green-color: #{setColor(coffee)};
+  margin-bottom: $section-spacing;
+  &-image {
+    padding: 0 emCal(16, 15);
+    text-align: center;
+    @include mq(md) {
+      margin-bottom: emCal(14, 30);
+    }
+    img {
+      @include imgCenter($width: emCal(16, 450), $type: contain);
+    }
+  }
+  &-content {
+    padding: 0 emCal(16, 15);
+    h5 {
+      @include typo($fsz: emCal(16, 30), $color: setColor(green), $fw: 600);
+      margin-bottom: emCal(30, 15);
+      span {
+        @include typo(
+          $fsz: emCal(30, 18),
+          $color: setShadeColor(medium),
+          $fw: 400
+        );
+      }
+    }
+    p {
+      @include typo($color: setShadeColor(medium), $lh: emCal(16, 30));
+      margin-bottom: emCal(30, 20);
+    }
+  }
+  &-countdown {
+    display: flex;
+    margin-bottom: emCal(16, 30);
+    &-item {
+      &:not(:last-child) {
+        margin-right: emCal(16, 15);
+      }
+      background-color: #fff;
+      border-radius: 999px;
+      text-align: center;
+      height: emCal(16, 80);
+      width: emCal(16, 80);
+      box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h6 {
+        @include typo($fsz: emCal(16, 30), $fw: 600, $color: setColor(green));
+      }
+    }
+  }
+  .ant-btn {
+    font-size: emCal(16, 13);
+    font-family: getFontWeight(600);
+    height: emCal(13, 45);
+    padding: 0 emCal(13, 30);
+    text-transform: uppercase;
+  }
+  &-wrapper {
+    padding: emCal(16, 50) 0;
+    background-color: #fff3dd;
+  }
+}

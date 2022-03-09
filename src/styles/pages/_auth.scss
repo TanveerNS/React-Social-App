@@ -1,0 +1,58 @@
+.auth {
+  margin-bottom: $section-spacing;
+  h2 {
+    @include typo($fsz: emCal(16, 44), $fw: 600);
+    margin-bottom: emCal(44, 40);
+    text-align: center;
+  }
+  &-form {
+    .ant-form {
+      .ant-form-item {
+        &-control {
+          &-input {
+            &-content {
+              .ant-input {
+                height: emCal(16, 45);
+              }
+            }
+          }
+        }
+      }
+      .form-functions {
+        margin-bottom: emCal(16, 30);
+        .ant-form-item {
+          &-control {
+            &-input {
+              &-content {
+                display: flex;
+                justify-content: space-between;
+                .ant-btn {
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .form-submit {
+        .ant-btn {
+          width: 100%;
+          height: emCal(16, 45);
+          text-transform: uppercase;
+          font-family: getFontWeight(600);
+          &:not(:last-child) {
+            margin-bottom: emCal(16, 20);
+          }
+          &.ant-btn-link {
+            font-family: getFontWeight(400);
+            color: setShadeColor(dark);
+            text-transform: uppercase;
+            span {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
