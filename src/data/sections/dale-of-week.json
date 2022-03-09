@@ -1,0 +1,24 @@
+{
+  "one": [
+    {
+      "title": "Eat Healthier",
+      "description": "Modi tempora incidunt ut labore dolore magnam aliquam",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/1.png"
+    },
+    {
+      "title": "We Have Brands",
+      "description": "Modi tempora incidunt ut labore dolore magnam aliquam",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/2.png"
+    },
+    {
+      "title": "Fresh And Clean Products",
+      "description": "Modi tempora incidunt ut labore dolore magnam aliquam",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/3.png"
+    },
+    {
+      "title": "Modern Process",
+      "description": "Modi tempora incidunt ut labore dolore magnam aliquam",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/4.png"
+    }
+  ]
+}

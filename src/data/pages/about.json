@@ -1,0 +1,21 @@
+{
+  "statistical": [
+    {
+      "number": 100,
+      "suffixes": "%",
+      "object": "Happy Client",
+      "icon": "/assets/images/pages/contact/ic-1.png"
+    },
+    {
+      "number": 142,
+      "object": "Our Engineer",
+      "icon": "/assets/images/pages/contact/ic-2.png"
+    },
+    {
+      "number": 16,
+      "prefix": "+",
+      "object": "Our Farm",
+      "icon": "/assets/images/pages/contact/ic-3.png"
+    }
+  ]
+}

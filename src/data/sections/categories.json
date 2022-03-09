@@ -1,0 +1,36 @@
+{
+  "one": [
+    {
+      "image": {
+        "background": "F",
+        "main": "/assets/images/sections/category/one/1.png"
+      },
+      "title": "Fresh fruit",
+      "quantity": 12
+    },
+    {
+      "image": {
+        "background": "D",
+        "main": "/assets/images/sections/category/one/2.png"
+      },
+      "title": "Dried",
+      "quantity": 8
+    },
+    {
+      "image": {
+        "background": "Y",
+        "main": "/assets/images/sections/category/one/3.png"
+      },
+      "title": "Vegetables",
+      "quantity": 2
+    },
+    {
+      "image": {
+        "background": "J",
+        "main": "/assets/images/sections/category/one/4.png"
+      },
+      "title": "Juice",
+      "quantity": 10
+    }
+  ]
+}

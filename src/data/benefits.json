@@ -1,0 +1,22 @@
+[
+  {
+    "iconSrc": "/assets/images/other/benefits/1.png",
+    "name": "FREE SHIPPING",
+    "description": "For all order over 99$"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/2.png",
+    "name": "DELIVERY ON TIME",
+    "description": "If good have prolems"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/3.png",
+    "name": "SECURE PAYMENT",
+    "description": "100% secure payment"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/4.png",
+    "name": "24/7 SUPPORT",
+    "description": "Dedicated support"
+  }
+]

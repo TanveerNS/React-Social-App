@@ -1,0 +1,32 @@
+{
+  "one": [
+    {
+      "background": "/assets/images/hero-slider/one/bg-1.png",
+      "subTitle": "Fruit Fresh",
+      "title": "Orange Lemon",
+      "price": {
+        "main": "14",
+        "unit": "pakage"
+      }
+    },
+    {
+      "background": "/assets/images/hero-slider/one/bg-2.png",
+      "subTitle": "Butter & Eggs",
+      "title": "Spice 100% Oganic",
+      "price": {
+        "main": "16",
+        "unit": "pakage"
+      }
+    }
+  ],
+  "four": [
+    {
+      "image": "/assets/images/hero-slider/four/1.png",
+      "background": "/assets/images/hero-slider/four/bg-1.png"
+    },
+    {
+      "image": "/assets/images/hero-slider/four/1.png",
+      "background": "/assets/images/hero-slider/four/bg-2.png"
+    }
+  ]
+}

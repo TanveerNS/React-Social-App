@@ -1,0 +1,56 @@
+{
+  "one": [
+    {
+      "content": {
+        "main": "Strawberry Jam 100% Natural Fruit Juice",
+        "span": "Sale Off 65%"
+      },
+      "background": "/assets/images/sections/banner/one/bg-1.png",
+      "image": "/assets/images/sections/banner/one/1.png"
+    },
+    {
+      "content": {
+        "main": "Cake 100% Natural Fruit Juice",
+        "span": "Sale Off 65%"
+      },
+      "background": "/assets/images/sections/banner/one/bg-2.png",
+      "image": "/assets/images/sections/banner/one/2.png"
+    }
+  ],
+  "three": [
+    {
+      "background": "/assets/images/sections/banner/three/bg-1.png",
+      "image": "/assets/images/sections/banner/three/1.png",
+      "title": { "main": "Black friday", "bold": "Sale off", "discount": "60%" }
+    },
+    {
+      "background": "/assets/images/sections/banner/three/bg-2.png",
+      "image": "/assets/images/sections/banner/three/2.png",
+      "title": { "main": "Summer", "bold": "Sale off", "discount": "50%" }
+    }
+  ],
+  "four": [
+    {
+      "type": "small",
+      "image": "/assets/images/sections/banner/four/small-1.png",
+      "background": "/assets/images/sections/banner/four/small-bg-1.png"
+    },
+    {
+      "type": "big",
+      "image": "/assets/images/sections/banner/four/big-1.png",
+      "background": "/assets/images/sections/banner/four/big-bg-1.png",
+      "content": "Offer 50% Off The Week"
+    },
+    {
+      "type": "big",
+      "image": "/assets/images/sections/banner/four/big-2.png",
+      "background": "/assets/images/sections/banner/four/big-bg-2.png",
+      "content": "Offer 60% Off The Week"
+    },
+    {
+      "type": "small",
+      "image": "/assets/images/sections/banner/four/small-2.png",
+      "background": "/assets/images/sections/banner/four/small-bg-2.png"
+    }
+  ]
+}

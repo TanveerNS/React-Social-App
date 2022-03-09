@@ -1,0 +1,29 @@
+[
+  {
+    "title": "INFOMATION",
+    "items": [
+      { "title": "About us", "href": "/other/about-us" },
+      { "title": "Check out", "href": "/shop/checkout" },
+      { "title": "Contact", "href": "/other/contact-us" },
+      { "title": "Service", "href": "#" }
+    ]
+  },
+  {
+    "title": "MY ACCOUNT",
+    "items": [
+      { "title": "My account", "href": "#" },
+      { "title": "Contact", "href": "/other/contact-us" },
+      { "title": "Shop Cart", "href": "/shop/cart" },
+      { "title": "Tracking Order", "href": "#" }
+    ]
+  },
+  {
+    "title": "QUICK SHOP",
+    "items": [
+      { "title": "About us", "href": "/other/about-us" },
+      { "title": "Check out", "href": "/shop/checkout" },
+      { "title": "Contact", "href": "/other/contact-us" },
+      { "title": "Service", "href": "#" }
+    ]
+  }
+]
